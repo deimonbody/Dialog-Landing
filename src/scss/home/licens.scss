@@ -1,0 +1,99 @@
+.licens{
+    padding:1px 0 1px 0;
+    position: relative;
+    margin-top:60px;
+    &__wrapper{
+        padding-bottom:1px;
+        margin-top:40px;
+        background-color: $blue;
+        color:white;
+        padding:1px 0 1px 0;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content{
+            display: flex;
+            flex-direction: column;
+            max-width: 45%;
+            margin:100px 70px 100px auto;
+            h2{
+                font-family: "Montserrat-Bold";
+                font-size:30px;
+                margin-bottom:25px;
+                max-width:550px;
+                text-align: left;
+            }
+            p{
+                font-size:16px;
+                font-family: "Lato";
+                max-width:550px;
+                margin-bottom:30px;
+            }
+    }
+    &__btn{
+        align-self: flex-start;
+        font-family: "Montserrat-Bold";
+        font-size:14px;
+        display: inline;
+    }
+
+    &__images{
+        width:30%;
+        max-width:650px;
+        margin-top:-40px;
+        margin-left:70px;
+        margin-bottom: -40px;;
+    }
+    img{
+        object-fit: contain;
+        height:100%;
+        width:100%;
+        // min-width: 285px;
+        // min-height: 550px;
+   
+    }
+}
+
+
+@media screen and(max-width:767px) {
+    .licens{
+        &__wrapper{
+            max-width:90%;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+        }
+        &__content{
+            max-width:100%;
+            margin:0;
+            align-items: center;
+            h2{
+                font-size:24px;
+                text-align: left;
+               
+                max-width:255px;
+            }
+            p{
+                margin-bottom:32px;
+               max-width:255px;
+               
+            }
+        }
+        &__images{
+            width:50%;
+            max-width:255px;
+            min-width:200px;
+            margin:0;
+            margin-top:-40px;
+            margin-bottom:40px;
+        }
+        &__btn{
+            padding:16px 24px;
+            font-size:16px;
+            margin-bottom:64px;
+            max-width:200px;
+            
+        }
+    }
+}

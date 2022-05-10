@@ -1,0 +1,88 @@
+a{
+    color:inherit;
+    text-decoration: none;         
+}
+
+*{margin:0;padding:0;}
+ul{list-style: none;}
+@mixin flex-centering{
+    align-items: center;
+    text-align: center;
+}
+
+@mixin animation-text{
+    transition: all 0.5s ease;
+}
+
+@mixin btn-template{
+    background-color: $red;
+    font-weight: bold;
+    padding:14px 30px;
+    border-radius: 23px;
+    @include animation-text;
+    color:white;
+    font-size:14px;        
+    &:hover{
+        background-color: $red-hover;
+    }
+}
+
+@mixin themeP{
+    font-size:14px;
+    font-family: "Montserrat-Light";
+    font-weight: 800;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before{
+        position: absolute;
+        left:-51px;
+        top:9px;
+        display: block;
+        content: " ";
+        width:40px;
+        height:1px;
+        background-color: $red;
+    }
+}
+@mixin themeTitle{
+    font-size:48px;
+    font-family: "Montserrat-Bold";
+    margin-bottom:45px;
+}
+
+@mixin font($font_name,$file_name,$weight,$style){
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff"),
+        url("../fonts/#{$file_name}.woff2")
+        ;
+        font-weight: #{$weight};
+        font-style: #{$style};
+        
+    }
+}
+.wrapper{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+
+
+@media screen and(max-width:1200px) {
+    .wrapper{max-width:970px};
+}
+@media screen and(max-width:992px) {
+    .wrapper{max-width:750px}
+}
+@media screen and(max-width:767px) {
+    .wrapper{max-width: none;}
+}
+@import "fonts";
+@import "variables";
+
+@import "header";
+@import "./home/home";
+@import "./popup";
+@import "footer";

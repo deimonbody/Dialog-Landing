@@ -1,0 +1,91 @@
+.start{
+    margin-top:120px;
+   
+    &__wrapper{
+        border-radius: 20px;
+        padding:1px 0 1px 0 ;
+        background: linear-gradient(90.03deg, #3035C3 0.03%, 
+        rgba(48, 53, 195, 0.954249) 21.37%, 
+        rgba(48, 53, 195, 0.863855) 
+        39.97%, rgba(48, 53, 195, 0.718583) 55.19%, 
+        rgba(48, 53, 195, 0) 99.97%), 
+        url('../../img/ahmed-hindawi-iwxutjOwoz4-unsplash.jpg'), 
+        #3035C4;
+        background-repeat: no-repeat;
+        background-size: cover;   
+        background-position: right;    
+        box-shadow: 0px 10px 40px rgba(73, 95, 211, 0.22);
+    }
+    &__back{
+        left: 0;
+        top:0;
+        width:100%;
+        height: 100%;
+        background: linear-gradient(
+      rgba(48, 53, 195, 1)
+        rgba(48, 53, 195, 0.95)
+        rgba(48, 53, 195, 0.86)
+        rgba(48, 53, 195, 0.72)
+        rgba(48, 53, 195, 0));
+    }
+    &__content{
+        z-index: 5;
+        margin:80px auto 86px 70px;
+        color:white;
+        max-width: 500px;
+    }
+    &__discaption{
+        max-width: 500px;
+    }
+    &__caption{
+        margin-left:55px;
+    }
+    &__list-points{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__list-item{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom:14px;
+    }
+    &__list-item-text{
+        font-size: 17px;
+        font-family: 'Lato';
+    
+    }
+    &__list-item-num{
+        margin-right: 16px;
+        font-size: 24px;
+        min-width: 22px;
+        font-family: 'Montserrat-Bold';
+        color:$red;
+    }
+
+  
+}
+
+@media screen and(max-width:767px) {
+    .start{
+        &__wrapper{
+            width: 90%;
+            
+        }
+        &__content{
+            margin:60px auto 60px auto;
+            display: flex;
+            width:90%;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__discaption{
+            max-width: 255px;
+            font-size: 36px;
+        }
+        &__caption{
+            font-size: 12px;
+            margin-left:9px;
+        }
+    }
+}

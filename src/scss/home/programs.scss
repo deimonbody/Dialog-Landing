@@ -1,0 +1,114 @@
+.programs{
+    padding:1px 0 1px 0;
+    &__wrapper{
+        margin-top:100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width:100%;
+    }
+
+    &__item{
+            height:470px;
+            width:280px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+
+    }
+
+    &__item-title{
+        display: flex;
+        flex-direction: column;
+        height:163px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border:1px solid rgba(222, 222, 255, 1);
+        margin-bottom:30px;
+        h2{
+                    font-size:18px; 
+                    font-family: "Montserrat-Boldish";
+                    color:$blue;
+                    span{font-size:40px;}
+                    margin:30px 0 16px 0;
+        }
+        p{
+            max-width:240px;
+            text-align: center;
+            font-size:14px;
+            font-family: "Montserrat-Bold";
+            margin-bottom:30px;
+            margin-right:20px;
+            margin-left:20px;
+        }
+    }
+
+    &__item-list{
+        align-self: stretch;
+    }
+
+    &__list-item{
+        margin-bottom:12px;
+              
+    }
+    &__btn{
+        font-family: "Montserrat-Bold";
+        margin:auto 0 20px 0;
+        font-size:16px;
+        display: inline;
+        padding:16px 73px;       
+    }
+    &__watch-video{
+        color:$blue;
+                &:hover{color:$red-hover;}
+                font-size:14px;
+                @include animation-text;
+                font-family: "Roboto-Bold";
+                i{
+                    margin-right:12px;
+                }
+    }
+}
+.list-item{
+    display: flex;
+    align-items: center;
+}
+.programs-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+                i{
+                    margin-right:15px;
+                    color:$red;
+                }
+
+                span{
+                    font-size:16px;
+                    font-family: "Lato";
+                }
+}
+@media screen and(max-width:767px) {
+    .programs{
+        &__wrapper{
+            width:90%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        &__box{
+            flex-direction: column;
+                align-items: center;
+        }
+        
+    }
+    
+}

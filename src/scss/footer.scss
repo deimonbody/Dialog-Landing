@@ -1,0 +1,180 @@
+.footer{
+    padding:1px 0 1px 0;
+    background-color:$blue;
+    &__wrapper{
+        margin-top:60px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__top{
+        display: flex;
+        margin-bottom:50px;
+    }
+    &__top-logo-block{
+        display: flex;
+        flex-direction: column;
+        color:white;
+        font-family: "Lato";
+        font-size:14px;
+        width:33,333%;
+        max-width: 200px;
+        margin-right:100px;
+    }
+    &__top-logo{
+        margin-bottom: 25px;
+
+    }
+    &__top-text-item:first-child{
+        margin-bottom:25px;
+    }
+    &__top-links{
+        display: flex;
+        margin-right:135px;
+        font-family: "MontserratReg";
+        font-weight: 700;
+        font-size:14px;
+    }
+    &__top-navigation,&__top-outlinks{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__top-navigation{
+        margin-right: 50px;
+    }
+    &__top--link{
+        color:white;
+        transition: all 0.5s ease-in-out;
+        margin-bottom:24px;
+        &:hover{
+            @include animation-text;
+            cursor: pointer;
+            color:$red;
+        }
+    }
+
+
+    &__top-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color:white;
+        font-family: "MontserratReg";
+        font-size: 13px;  
+    }
+    &__top-contact--title{
+     font-weight: 700;
+     margin-bottom:12px;
+     font-size:14px;
+    }
+    &__top-contact--description{
+        margin-bottom:24px;
+        font-size:14px;
+        font-family: "Montserrat-Light";
+    }
+
+    &__top-telephons{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: "MontserratReg";
+    }
+    &__top-phone-block{
+        margin-bottom:10px;
+    }
+
+    &__line{
+        width:100%;
+        height:1px;
+        background-color: white;
+    }
+
+    &__bottom{
+        margin-top:32px;
+        margin-bottom:40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social-links--item{
+        color:white;
+    }
+    &__agres{
+        color:white;
+        font-family: "MontserratReg";
+        font-size:14px;
+    }
+    &__agres-text:first-child{
+        margin-right:24px;
+    }
+    &__agres-text{
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+    }
+}
+@media screen and(max-width:992px) {
+    .footer{
+        &__top-links{
+            margin-right:95px;
+        }
+    }
+}
+
+@media screen and(max-width:767px){
+    .footer{
+        &__top{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__top-logo-block{
+            margin-right:0;
+            max-width: 327px;
+            width:90%;
+            text-align: center;
+            margin-bottom:52px;
+        }
+        &__top-links{
+            margin-right: 0;
+            
+        }
+        
+        &__top-outlinks{
+            justify-content: space-between;
+            margin-bottom:52px;
+        }
+        &__top-contact{
+            text-align: center;
+            max-width: 327px;
+            width:90%;
+            align-items: center;
+        }
+        &__line{
+           
+            width:95%;
+            align-self: center;
+        }
+        &__agres{
+            order:1;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            text-align: center;
+        }
+
+        &__agres-text:first-child{
+            margin-bottom:24px;
+            margin-right:0;
+        }
+        &__social-links{
+            order:2;
+            margin-top:40px;
+        }
+        &__bottom{
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    }
+}
